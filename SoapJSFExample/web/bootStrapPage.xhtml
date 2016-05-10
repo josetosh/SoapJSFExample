@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Bootstrap Components Below</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"></link>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+        <!--<meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="X-UA-Conpatible" content="IE=edge" />
+        <h:outputStylesheet  name="css/bootstrap.css"/>
+        <h:outputScript name="js/bootstrap.js"/>-->
+        <h:outputStylesheet library="css" name="bootstrap.min.css"></h:outputStylesheet>
+
+    </h:head>
+    <h:body>
+        <nav class="navbar navbar-dark bg-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Dummy-Shop Ltd</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active btn btn-primary"><a href="index.xhtml" data-toggle="tooltip" title="Our Home Page">Home</a></li>
+                    <li class="active btn btn-primary"><a href="index.xhtml" data-toggle="tooltip" title="All About Us">About Us</a></li>
+                    <li class="active btn btn-primary"><a href="index.xhtml" data-toggle="tooltip" title="Our Products">Products</a></li> 
+                    <li class="active btn btn-primary"><a href="index.xhtml" data-toggle="tooltip" title="Reach US">Contact Us</a></li> 
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.xhtml"><span class="glyphicon glyphicon-plus-sign"></span> Shop Again</a></li>
+                    <li><a href="index.xhtml"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="index.xhtml"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p>&nbsp;</p>        
+        <center><p:outputLabel value="Summary of Your Purchase"/></center>
+        <p>&nbsp;</p>        
+
+        <!--<div class="container">
+            <div class="navbar navbar-inverse">
+                <div class="navbar-brand">
+                    Demo Web
+                </div>                
+            </div>
+        </div>
+
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">           
+        </div>
+
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+            Single toggle
+        </button>
+
+
+        
+
+
+        <center>
+            <h:form styleClass="form-horizontal">
+                <div class="form-group">
+                    <h:outputLabel value="Product Purchased" />
+                    <h:inputText value="#{checkOut.name}" />
+                </div>
+                <div>
+                    <h:outputLabel value="Quantity Purchased" />
+                    <h:inputText value="#{checkOut.quantity}" />
+                </div>
+            </h:form>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+        </center>-->
+        <center>               
+            <table border="solid" cellpadding="2" cellspacing="3">
+                <thead>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th>Product Amount</th>
+                    <th>Product Discount</th>
+                </thead>
+                <ui:repeat var="pdt" value="#{checkOut.products}">
+                    <tr>
+                        <td data-toggle="tooltip" title="Product Name">#{pdt.name}</td>
+                        <td>#{pdt.quantity}</td>
+                        <td>#{pdt.amount}</td>
+                        <td>#{pdt.discount}</td>
+                    </tr>
+                </ui:repeat>
+            </table> 
+            <p>&nbsp;</p>
+            <h:form>
+                <h:commandLink id="fbk" action="#{checkOut.feedBack()}"  value="Your Feedback" type="button" class="btn btn-primary" />
+                <p:tooltip>
+                    <p:outputLabel value="Give us Feedback"/>
+                </p:tooltip>
+            </h:form>
+        </center>
+        <!--<div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">WebSiteName</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#" data-toggle="tooltip" title="Hooray!">Page 1</a></li>
+                <li><a href="#">Page 2</a></li> 
+                <li><a href="#">Page 3</a></li> 
+            </ul>
+        </div>-->
+
+    </h:body>
+</html>
+

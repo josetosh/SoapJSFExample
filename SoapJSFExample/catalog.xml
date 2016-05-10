@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/processPaymentReq/processPaymentReq?wsdl" uri="src/conf/xml-resources/web-service-references/processPaymentReq/wsdl/localhost_8080/processPaymentReq/processPaymentReq.wsdl"/>
+    <system systemId="http://localhost:8080/processPaymentReq/processPaymentReq?xsd=1" uri="src/conf/xml-resources/web-service-references/processPaymentReq/wsdl/localhost_8080/processPaymentReq/processPaymentReq.xsd_1.xsd"/>
+    <system systemId="file:/C:/Users/jnjeru/Documents/NetBeansProjects/SoapJSFExample/web/WEB-INF/wsdl/ProcessPaymentReq.wsdl" uri="src/conf/xml-resources/web-service-references/processPaymentReq/wsdl/ProcessPaymentReq.wsdl"/>
+    <system systemId="http://localhost:8080/ProcessPayment/ProcessPayment?wsdl" uri="src/conf/xml-resources/web-service-references/ProcessPayment/wsdl/localhost_8080/ProcessPayment/ProcessPayment.wsdl"/>
+    <system systemId="http://localhost:8080/ProcessPayment/ProcessPayment?xsd=1" uri="src/conf/xml-resources/web-service-references/ProcessPayment/wsdl/localhost_8080/ProcessPayment/ProcessPayment.xsd_1.xsd"/>
+</catalog>
